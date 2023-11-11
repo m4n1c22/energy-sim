@@ -10,8 +10,16 @@
       margin: 0;
     }
 
-    .table-container {
+    #heading {
+    	display: flex;
+    	text-align: center;
+    	position: relative;
+    }
+
+		.table-container {
       padding: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
     }
 
     table {
@@ -28,6 +36,10 @@
     th {
       background-color: #f2f2f2;
     }
+
+    .footer {
+      margin-top: 20px;
+    }
   </style>
     <script src="https://cdn.html-custom-elements.net/on-off-switch-1-0-0-min.js"></script>
     <script type="text/javascript">
@@ -40,11 +52,15 @@
     </script>
   </head>
   <body>
-    <h1>Simulation</h1>
-    <br/>
-    <newline>
-    
+  	<div class="content-container">
+    <div id="heading">
+    	<center>
+    	<h1>Simulation</h1>
+    	<br>
+    	</center>
+    </div>
 
+    <div class="table-container">
     <table>
     	<tr>
     		<td>
@@ -162,6 +178,14 @@
     		</td>
     	</tr>
     </table>
+  </div>
+  <br>
 
+  <div class="footer">
+  	<h2>Energy Savings(%) {{ int_savings }}</h2>
+  	<br/>
+    <h1>Accummulated Overall Energy Savings(%) {{ savings }}</h1>
+  </div>
+</div>
   </body>
 </html>
