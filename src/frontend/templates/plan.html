@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <title>Energy Sim</title>
+    <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .table-container {
+      padding: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+    <script src="https://cdn.html-custom-elements.net/on-off-switch-1-0-0-min.js"></script>
+    <script type="text/javascript">
+    	window.onload = function() {
+    	setTimeout(
+    function() {
+      window.location.replace("/plan/{{ schedulenum }}")
+    }, 3000);
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Simulation</h1>
+    <br/>
+    <newline>
+    
+
+    <table>
+    	<tr>
+    		<td>
+				<div>
+					Unscheduled
+					<br/>
+				      <table>
+						<tr>
+							<td>
+								 Washing Machine
+								 <br/>
+								 <div style="height: 20px;">
+									<on-off-switch id="wm" readonly is-on="{{ wm }}"></on-off-switch>
+								</div> 
+							</td>							
+							<td> 
+							 	Refrigerator
+							 	<br/>
+							 	<div style="height: 20px;">
+									<on-off-switch id="ref" readonly is-on="{{ ref }}"></on-off-switch>
+								</div> 
+							</td>
+						</tr>
+						<tr>
+							<td> 
+								Television
+								<br/>
+							 	<div style="height: 20px;">
+									<on-off-switch id="tv" readonly is-on="{{ tv }}"></on-off-switch>
+								</div> 
+							</td>							
+							<td> 
+								Computer
+								<br/>
+							 	<div style="height: 20px;">
+									<on-off-switch readonly is-on="{{ comp }}"></on-off-switch>
+								</div> 
+							</td>
+						</tr>
+						<tr>
+							<td> 
+								Dishwasher
+								<br/>
+							 	<div style="height: 20px;">
+									<on-off-switch id="tv" readonly is-on="{{ dish }}"></on-off-switch>
+								</div> 
+							</td>
+							<td> 
+								Microwave
+								<br/>
+							 	<div style="height: 20px;">
+									<on-off-switch readonly is-on="{{ micro }}"></on-off-switch>
+								</div> 
+							</td>
+						</tr>
+						</table>
+				    </div>
+    		</td>
+    		<td>
+    		</td>
+    		<td>
+    			<div>
+    				Scheduled
+				      <table>
+						<tr>
+							<td>
+								 Washing Machine
+								 <br/>
+								 <div style="height: 20px;">
+									<on-off-switch readonly  is-on="{{ iwm }}"></on-off-switch>
+								</div> 
+							</td>
+							<td> 
+							 	Refrigerator
+							 	<br/>
+							 	<div style="height: 20px;">
+									<on-off-switch readonly  is-on="{{ iref }}"></on-off-switch>
+								</div> 
+							</td>
+						</tr>
+						<tr>
+							<td> 
+								Television
+								<br/>
+							 	<div style="height: 20px;">
+									<on-off-switch readonly  is-on="{{ itv }}"></on-off-switch>
+								</div> 
+							</td>
+							<td> 
+								Computer
+								<br/>
+							 	<div style="height: 20px;">
+									<on-off-switch readonly  is-on="{{ icomp }}"></on-off-switch>
+								</div> 
+							</td>
+						</tr>
+						<tr>
+							<td> 
+								Dishwasher
+								<br/>
+							 	<div style="height: 20px;">
+									<on-off-switch readonly  is-on="{{ idish }}"></on-off-switch>
+								</div> 
+							</td>
+							<td> 
+								Microwave
+								<br/>
+							 	<div style="height: 20px;">
+									<on-off-switch readonly  is-on="{{ imicro }}"></on-off-switch>
+								</div> 
+							</td>
+						</tr>
+						</table>
+				    </div>
+    		</td>
+    	</tr>
+    </table>
+
+  </body>
+</html>
